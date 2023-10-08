@@ -26,6 +26,7 @@ raw_df = pd.concat(df_list)
 
 ```{python}
 df = raw_df[['Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']].copy()
+df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y')
 ```
 
 ```{python}
