@@ -1,0 +1,33 @@
+---
+title: "La liga"
+author: "René Valenzuela"
+date: "2023-10-08"
+date-modified: last-modified
+categories: [soccer]
+image: "image.jpg"
+---
+
+```{python}
+import glob
+import pandas as pd
+```
+
+```{python}
+# Retrieve data
+path = r'./raw/*.csv'
+csv_files = glob.glob(path)
+
+df_list = list()
+for f in csv_files:
+    df_list.append(pd.read_csv(f))
+
+raw_df = pd.concat(df_list)
+```
+
+```{python}
+df = raw_df[['Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']].copy()
+```
+
+```{python}
+df.to_parquet('./curated/la_liga_21_22_23_scores.parquet')
+```

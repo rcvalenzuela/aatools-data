@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "blog",
+    "section": "",
+    "text": "La liga\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2023\n\n\nRené Valenzuela\n\n\n\n\n\n\n  \n\n\n\n\nPredictions\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\nRené Valenzuela\n\n\n\n\n\n\n  \n\n\n\n\nTransport\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\nRené Valenzuela\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/la-liga/index.html",
+    "href": "posts/la-liga/index.html",
+    "title": "La liga",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/predictions/index.html",
+    "href": "posts/predictions/index.html",
+    "title": "Predictions",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/transport/index.html",
+    "href": "posts/transport/index.html",
+    "title": "Transport",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]
