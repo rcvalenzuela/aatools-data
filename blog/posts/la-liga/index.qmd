@@ -7,10 +7,17 @@ categories: [soccer]
 image: "image.jpg"
 ---
 
+# Data source
+
 ```{python}
+import os
 import glob
 import pandas as pd
 ```
+
+# Processing assumptions
+
+1. RAW files are named as: `la_liga_YY_YY.csv` where **YY_YY** represents the years defining the season.
 
 ```{python}
 # Retrieve data
@@ -19,14 +26,24 @@ csv_files = glob.glob(path)
 
 df_list = list()
 for f in csv_files:
-    df_list.append(pd.read_csv(f))
+    # Extract season from file name
+    season = os.path.splitext(f)[0].split('_', 1)[1]
+    # Read season file
+    dfi = pd.read_csv(f)
+    # Add season information
+    dfi['season'] = 's_' + season
+    # Append to list of seasons
+    df_list.append(dfi)
 
 raw_df = pd.concat(df_list)
 ```
 
+# Dataset transformations
+
 ```{python}
-df = raw_df[['Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']].copy()
-df['Date'] = pd.to_datetime(df['Date'], format='%d/%m/%Y')
+df = raw_df[['season', 'Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']].copy()
+df.columns = df.columns.str.lower()
+df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
 ```
 
 ```{python}
